@@ -10,7 +10,9 @@ const ChatBox: React.FC<ChatBoxProps> = ({ username }) => {
     const [inputMessage, setInputMessage] = useState<string>('');
 
     // Establish WebSocket connection and handle incoming messages
-    const { sendMessage,  } = useWebSocket('ws://172.20.10.4:8080/chat', {
+    // const { sendMessage,  } = useWebSocket('ws://<your_ip>:8080/chat', {
+        const { sendMessage,  } = useWebSocket('ws://localhost:8080/chat', {
+
         onOpen: () => {
             // Send a "join" message when the user connects
             sendMessage(JSON.stringify({ type: 'join', username, message: '' }));
