@@ -1,0 +1,7 @@
+# ไฟล์ที่สร้างโดย IDE
+.vscode/
+.idea/
+
+# ไฟล์ที่เกี่ยวข้องกับ Node.js
+node_modules/
+npm-debug.log
